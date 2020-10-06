@@ -1,5 +1,30 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Note:
+
+For security reasons you will need to initialize your own firebase database. Code is as follows for my project. I have deleted my api access. Firebase provides all of the required code when you initialize a new project
+
+const firebaseConfig = {
+  apiKey: "YOUR API KEY",
+  authDomain: "YOUR APP DOMAIN",
+  databaseURL: "YOUR URL",
+  projectId: "YOUR ID",
+  storageBucket: "YOUR STORAGE BUCKET",
+  messagingSenderId: "YOUR SENDER ID",
+  appId: "YOUR APP ID",
+  measurementId: "YOUR MEASUREMENT ID",
+};
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+
+// firebase authentication using google login
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export { auth, provider };
+export default db;
+
 ## Available Scripts
 
 In the project directory, you can run:
