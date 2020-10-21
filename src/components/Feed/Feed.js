@@ -6,7 +6,6 @@ import StoryReel from "../StoryReel/StoryReel";
 import Post from "../Post/Post";
 import "./Feed.css";
 
-
 import db from "../../firebase";
 
 function Feed() {
